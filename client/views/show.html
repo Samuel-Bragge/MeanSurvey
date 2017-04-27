@@ -1,0 +1,35 @@
+<div class="container" ng-controller="showController as sc">
+    <a href="#!/dash" class="u-pull-right">Back to Poll</a>
+    <h2 ng-bind="sc.poll.question"></h2>
+    <p>Click the Vote button to choose one</p>
+    <table>
+        <thead>
+            <th>Option</th>
+            <th>Current Count of Votes</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td ng-bind="sc.poll.option1"></td>
+                <td ng-bind="sc.poll.option1Votes"></td>
+                <td><button ng-click="sc.vote(sc.poll._id, 1)">Vote</button></td>
+            </tr>
+            <tr>
+                <td ng-bind="sc.poll.option2"></td>
+                <td ng-bind="sc.poll.option2Votes"></td>
+                <td><button ng-click="sc.vote(sc.poll._id, 2)">Vote</button></td>
+            </tr>
+            <tr>
+                <td ng-bind="sc.poll.option3"></td>
+                <td ng-bind="sc.poll.option3Votes"></td>
+                <td><button ng-click="sc.vote(sc.poll._id, 3)">Vote</button></td>
+            </tr>
+            <tr>
+                <td ng-bind="sc.poll.option4"></td>
+                <td ng-bind="sc.poll.option4Votes"></td>
+                <td><button ng-click="sc.vote(sc.poll._id, 4)">Vote</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

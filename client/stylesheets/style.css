@@ -1,0 +1,13 @@
+h1 {
+  color: red; }
+
+table {
+  width: 100%; }
+  table th, table td {
+    border: 2px solid black;
+    text-align: center; }
+
+.q-input {
+  width: 50%; }
+
+/*# sourceMappingURL=style.css.map */

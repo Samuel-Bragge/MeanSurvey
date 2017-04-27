@@ -1,0 +1,28 @@
+<div class="container" ng-controller="dashController as dc">
+    <div class="u-pull-right row">
+        <a href="#!/new"><button>Create a New Poll</button></a>
+        <button>Logout</button>
+    </div>
+
+    <h2>Current Polls:</h2>
+    <div class="row">
+        <input type="text" placeholder="Search..." ng-model="dc.searchParam" class="u-pull-right">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Survey Question</th>
+                <th>Date Provided</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="poll in dc.polls">
+                    <td ng-bind="poll.name"></td>
+                    <td><a href="#!/show/{{poll._id}}" ng-bind="poll.question"></a></td>
+                    <td ng-bind="poll.createdAt | date:'MM/dd/yyyy'"></td>
+                    <td><button ng-click="dc.destroy(poll._id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

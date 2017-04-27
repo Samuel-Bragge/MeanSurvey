@@ -1,0 +1,23 @@
+<div class="container" ng-controller="newController as nc">
+
+    <div class="row">
+        <h2 class="nine columns">Put the question and options here:</h2>
+        <a href="#!/dash" class="three columns">Cancel</a>
+    </div>
+
+    <form ng-submit="nc.create()">
+        <label>Question: <input type="text" ng-model="nc.newPoll.question" class="q-input"></label>
+        <label>Option 1: <input type="text" ng-model="nc.newPoll.option1"></label>
+        <label>Option 2: <input type="text" ng-model="nc.newPoll.option2"></label>
+        <label>Option 3: <input type="text" ng-model="nc.newPoll.option3"></label>
+        <label>Option 4: <input type="text" ng-model="nc.newPoll.option4"></label>
+        <input type="submit" value="create poll" class="u-pull-right">
+    </form>
+
+    <ul>
+        <li ng-repeat="error in nc.errors"><span ng-bind="error"></span></li>
+    </ul>
+
+
+
+</div>
